@@ -14,4 +14,4 @@ A proof of concept for the new Portable Stimulus standard, PSS, has been conduct
 * FW_Uart
 	* The C code and a SystemVerilog testbench for running it
 * Infact code
-	* The rules files created in inFact
+	* The rules files created in inFact and the generated code
