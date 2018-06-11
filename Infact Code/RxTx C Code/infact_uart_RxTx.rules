@@ -1,0 +1,40 @@
+/****************************************************************************
+ *                          infact_uart_RxTx.rules
+ *
+ * Copyright 2008-2014 Mentor Graphics Corporation.  All Rights Reserved.
+ ****************************************************************************/
+
+rule_graph infact_uart_RxTx {
+    action init, infact_checkcov; 
+
+    struct infact_uart_RxTx_item_c {
+		meta_action payload [unsigned 7:0];
+		meta_action delay [signed 31:0];
+		meta_action kind [signed enum RECEIVE, TRANSMIT];
+
+		constraint c_delay{
+			delay < 20;
+			delay >= 1;
+		}
+
+		action do_RxTx;
+		attributes do_RxTx {
+			sw_action_stmt = "do_RxTx(fields->infact_uart_RxTx_item_c_inst.payload, fields->infact_uart_RxTx_item_c_inst.kind, fields->infact_uart_RxTx_item_c_inst.delay);";
+		}
+
+		bins payload [0] [1] [2] [3..252]/4 [253] [254] [255];
+	}
+
+	attributes infact_uart_RxTx{
+		include += "#include \"uart_RxTx.h\"";	
+	}
+    
+    infact_uart_RxTx_item_c infact_uart_RxTx_item_c_inst;
+    
+    interface do_item(infact_uart_RxTx_item_c);
+
+    infact_uart_RxTx = init repeat {
+    	do_item(infact_uart_RxTx_item_c_inst)
+    	infact_checkcov
+    };
+}

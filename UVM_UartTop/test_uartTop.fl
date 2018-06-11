@@ -1,0 +1,10 @@
+//====================================================================
+// Created       : Karianne Krokan Kragseth at 2018-04-06
+//====================================================================
+
+$VC_WORKSPACE/products/Princess/common/sim_Uart/uvm/tb/uvm_uart/in_uart.sv
+$VC_WORKSPACE/products/Princess/common/sim_Uart/uvm/tb/paTest_uart.sv
+$VC_WORKSPACE/products/Princess/common/sim_Uart/uvm/tb/uvm_PeripheralSS/in_PeripheralSubSystem.sv
+$VC_WORKSPACE/products/Princess/common/sim_Uart/uvm/tb/paTest_uartTop.sv
+
+$VC_WORKSPACE/products/Princess/common/sim_Uart/uvm/tb/top_uartTop.sv +incdir+.

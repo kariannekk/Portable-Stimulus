@@ -1,0 +1,18 @@
+//====================================================================
+// Created       : Karianne Krokan Kragseth at 2018-03-22
+//====================================================================
+
+// RTL models
+$VC_WORKSPACE/ip/PeripheralSubSystem/sim/tb/AHB2APB.sv
+
+$VC_WORKSPACE/ip/PeripheralSubSystem/sim/tb/IntegrationLevelAHB.sv
+$VC_WORKSPACE/ip/PeripheralSubSystem/uvm/tb/IntegrationLevelRAM.sv
+$VC_WORKSPACE/ip/PeripheralSubSystem/sim/tb/pa_PcgcSetupPeripheralSubSystemTB.sv
+$VC_WORKSPACE/ip/PeripheralSubSystem/sim/tb/IntegrationLevelPcgc.sv
+
+$VC_WORKSPACE/ip/PeripheralSubSystem/uvm/tb/uvm_uart/in_uart.sv
+$VC_WORKSPACE/ip/PeripheralSubSystem/uvm/tb/paTest_uart.sv
+$VC_WORKSPACE/ip/PeripheralSubSystem/uvm/tb/in_PeripheralSubSystem.sv
+$VC_WORKSPACE/ip/PeripheralSubSystem/uvm/tb/paTest_PeripheralSubSystem.sv
+
+$VC_WORKSPACE/ip/PeripheralSubSystem/uvm/tb/top_PeripheralSubSystem.sv +incdir+.

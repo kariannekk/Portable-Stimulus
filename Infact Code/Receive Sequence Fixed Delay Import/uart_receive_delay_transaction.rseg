@@ -1,0 +1,16 @@
+rule_segment {
+  import "uart_transaction.rseg";
+
+  struct uart_receive_delay_transaction extends uart_transaction {
+
+    // constraints
+
+    constraint c_receive {
+      kind == RECEIVE;
+    };
+
+    constraint c_fixed_delay {
+      delay == 1;
+    };
+  }
+}

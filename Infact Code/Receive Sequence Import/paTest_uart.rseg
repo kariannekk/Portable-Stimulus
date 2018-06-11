@@ -1,0 +1,7 @@
+rule_segment paTest_uart {
+
+  // enums
+
+  set stop_e[signed enum TWO_STOP_BITS, ONE_STOP_BIT];
+  set kind_e[signed enum RECEIVE, TRANSMIT];
+}

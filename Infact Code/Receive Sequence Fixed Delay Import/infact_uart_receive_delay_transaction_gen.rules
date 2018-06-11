@@ -1,0 +1,21 @@
+rule_graph infact_uart_receive_delay_transaction_gen {
+  attributes infact_uart_receive_delay_transaction_gen {
+    call_pre_post_randomize = true;
+    unroll_array_max = 256;
+    unroll_dynamic_arrays = false;
+  }
+  import "uart_receive_delay_transaction.rseg";
+  attributes infact_uart_receive_delay_transaction_gen {
+    base_class="paTest_uart::uart_sequence_receive_fixed_delay";
+  }
+  interface do_item(uart_receive_delay_transaction);
+  uart_receive_delay_transaction uart_receive_delay_transaction_inst;
+  action init;
+  action infact_checkcov;
+  infact_uart_receive_delay_transaction_gen =
+    init
+    repeat {
+      do_item(uart_receive_delay_transaction_inst)
+      infact_checkcov
+    };
+}

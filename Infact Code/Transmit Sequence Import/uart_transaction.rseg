@@ -1,0 +1,36 @@
+rule_segment {
+  import "paTest_uart.rseg";
+
+  struct uart_transaction {
+
+    // meta actions
+
+    meta_action payload[unsigned 7:0];
+    meta_action start_bit[unsigned 0:0];
+    meta_action stop_bits[unsigned 1:0];
+    meta_action kind<paTest_uart::kind_e>[kind_e];
+    meta_action stop_type<paTest_uart::stop_e>[stop_e];
+    meta_action delay[signed 31:0];
+
+    // constraints
+
+    constraint c_delay {
+      delay < 20;
+      delay >= 1;
+    };
+
+    constraint c_start_bit {
+      start_bit == 1'b0;
+    };
+
+    constraint c_stop_bits {
+      stop_bits == 2'h3;
+    };
+
+    constraint c_stop_bits_t {
+      stop_type == ONE_STOP_BIT;
+    };
+    
+    bins payload [0] [1] [2] [3..252]/4 [253] [254] [255];
+  }
+}

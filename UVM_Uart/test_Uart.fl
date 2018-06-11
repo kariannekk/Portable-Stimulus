@@ -1,0 +1,10 @@
+//====================================================================
+// Created       : Karianne Krokan Kragseth at 2018-03-07
+//====================================================================
+
+$VC_WORKSPACE/ip/Uart/uvm/tb/BrgModel.sv
+$VC_WORKSPACE/ip/Uart/uvm/tb/in_uart.sv
+$VC_WORKSPACE/ip/Uart/uvm/tb/paTest_par.sv
+$VC_WORKSPACE/ip/Uart/uvm/tb/paTest_uart.sv
+
+$VC_WORKSPACE/ip/Uart/uvm/tb/top_uart.sv +incdir+.

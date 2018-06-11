@@ -1,0 +1,12 @@
+rule_segment {
+  import "uart_transaction.rseg";
+
+  struct uart_transmit_transaction extends uart_transaction {
+
+    // constraints
+
+    constraint c_transmit {
+      kind == TRANSMIT;
+    };
+  }
+}
